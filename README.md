@@ -54,11 +54,11 @@ $ bitbake imx-image-full <br />
 ##If get FetchError message,then change git branch=master => branch=main.
 
 # Flash Image into SDcard
-##(1)	Go to Image Path by:
-$ cd BUILD_DIR/tmp/deploy/images/<MACHINE_NAME>/
-##(2)	Unzip .zst image file
-$ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst
-##(3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card
-(4)	Use SD-Card Boot Mode to boot in SRG/PICO-IMX8P, SRG/PICO-IMX8PL
+##(1)	Go to Image Path by: <br>
+$ cd BUILD_DIR/tmp/deploy/images/<MACHINE_NAME>/ <br>
+##(2)	Unzip .zst image file <br>
+$ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst <br>
+##(3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card <br>
+##(4)	Use SD-Card Boot Mode to boot in SRG/PICO-IMX8P, SRG/PICO-IMX8PL
 
 
