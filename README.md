@@ -46,7 +46,7 @@ $ export PATH=~/bin:$PATH <br />
    $ bitbake imx-image-full
 ## (4)   Flash to SD Card
     
-# Noted
+## Noted
 ## If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
 $ bitbake <package_name> -c do_cleansstate <br />
 $ bitbake -c compile <package_name> <br />
