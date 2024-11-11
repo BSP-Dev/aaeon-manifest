@@ -9,8 +9,8 @@ xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl
 # repo installation (This step may not be needed if it had already existed)
 $ mkdir ~/bin  
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo  
-$ chmod a+x ~/bin/repo  
-$ export PATH=~/bin:$PATH  
+$ chmod a+x \~/bin/repo  
+$ export PATH=\~/bin:$PATH  
 
 # Build SRG-IMX8P BSP
 ## (1)	Download Yocto BSP with kernel 5.15.71
