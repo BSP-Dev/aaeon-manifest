@@ -7,10 +7,10 @@ build-essential chrpath socat cpio python3 python3-pip python3-pexpect lz4 \
 xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm
 
 # repo installation (This step may not be needed if it had already existed)
-$ mkdir ~/bin <br />
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo <br /> 
-$ chmod a+x ~/bin/repo <br />
-$ export PATH=~/bin:$PATH <br />
+`$ mkdir ~/bin`
+`$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo`
+`$ chmod a+x ~/bin/repo`
+`$ export PATH=~/bin:$PATH`
 
 # Build SRG-IMX8P BSP
 ## (1)	Download Yocto BSP with kernel 5.15.71
