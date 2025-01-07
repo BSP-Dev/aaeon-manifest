@@ -16,7 +16,7 @@ $ export PATH=\~/bin:$PATH
 ## (1)	Download Yocto BSP with kernel 5.15.71
    $ mkdir imx-yocto-bsp <br />
    $ cd imx-yocto-bsp <br />
-   $ repo init -u https://github.com/jasonfsyang/aaeon-manifest.git -b main -m aaeon-kirkstone-v01.xml <br />
+   $ repo init -u https://github.com/jasonfsyang/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v01.xml <br />
    $ repo sync
 ## (2)	Environment setup
    2G DDR <br />
@@ -34,7 +34,7 @@ $ export PATH=\~/bin:$PATH
 ## (1)   Download Yocto BSP with kernel 5.15.71
    $ mkdir imx-yocto-bsp <br />
    $ cd imx-yocto-bsp <br />
-   $ repo init -u https://github.com/jasonfsyang/aaeon-manifest.git -b main -m aaeon-kirkstone-v02.xml <br />
+   $ repo init -u https://github.com/jasonfsyang/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v02.xml <br />
    $ repo sync
 ## (2)   Environment setup
    SRG-IMX8PL 4GB <br />
