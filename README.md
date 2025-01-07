@@ -3,7 +3,7 @@
 ## Example
 - To download the 6.6.23 release
 ```bash
-repo init -u https://github.com/justbuyyal/meta-aaeon-nxp.git -b scarthgap -m aaeon-scarthgap-v01.xml
+repo init -u https://github.com/jasonfsyang/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v01.xml
 ```
 ## Setup the build folder for a BSP release:
 ```
