@@ -42,7 +42,7 @@
   <project name="meta-matter" remote="imx" path="sources/meta-matter" revision="refs/tags/rel_imx_6.6.23-2.0.0" upstream="imx_matter_2024_q1-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.6.23_2.0.0" upstream="scarthgap-6.6.23-2.0.0" />
 
-  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="6cada5d2b5fd5b87d555584950380bae39c69c1e" upstream="scarthgap">
+  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="b8c4d2ccfb265761d90f528a7495554e66e85e15" upstream="scarthgap">
      <linkfile dest="aaeon-setup-release.sh" src="conf/aaeon-setup-release.sh"/>
   </project>
 
