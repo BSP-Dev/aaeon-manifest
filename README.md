@@ -7,7 +7,7 @@ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon
 ```
 ## Setup the build folder for a BSP release:
 ```
-[MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./aaeon-setup-release.sh -b bld-<backend>
+[MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./aaeon-imx-setup-release.sh -b bld-<backend>
 <machine>   defaults to `ucom-imx93-v1`
 <backend>   Graphics backend type
     xwayland    Wayland with X11 support - default distro
@@ -17,7 +17,7 @@ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon
 Examples:
 - Setup for Xwayland
 ```bash
-MACHINE=ucom-imx93-v1 DISTRO=fsl-imx-xwayland source ./aaeon-setup-release.sh -b bld-xwayland
+MACHINE=ucom-imx93-v1 DISTRO=fsl-imx-xwayland source ./aaeon-imx-setup-release.sh -b bld-xwayland
 ```
 ## Build an image:
 ```plaintext
