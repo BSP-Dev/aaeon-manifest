@@ -15,7 +15,7 @@
   <remote name="imx"         fetch="https://github.com/nxp-imx"/>
   <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
 
-  <remote name="meta-aaeon-nxp" fetch="https://github.com/justbuyyal"/>
+  <remote name="meta-aaeon-nxp" fetch="https://github.com/BSP-Dev"/>
 
   <project name="poky" remote="yp" path="sources/poky" revision="02eacd385eca7aa9cf25aaaa61427aa9c126e0bc" upstream="scarthgap"/>
   <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" revision="a72010b414ee3d73888ac9cb4e310e8f05e13aea" upstream="scarthgap"/>
@@ -42,7 +42,7 @@
   <project name="meta-matter" remote="imx" path="sources/meta-matter" revision="refs/tags/rel_imx_6.6.23-2.0.0" upstream="imx_matter_2024_q1-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.6.23_2.0.0" upstream="scarthgap-6.6.23-2.0.0" />
 
-  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="6d3f0bbf6fd8a7e4af12eb583fc13496d35fdc8a" upstream="scarthgap">
+  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="f6ab1e71b758629c37ae4e7725919d2c214304a5" upstream="scarthgap">
      <linkfile dest="aaeon-setup-release.sh" src="conf/aaeon-setup-release.sh"/>
   </project>
 
