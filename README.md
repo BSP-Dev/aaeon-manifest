@@ -2,6 +2,16 @@
 - This repo is dedicated to the NXP IMX-based modules. Here you can find the Yocto BSP recipes for AAEON.
 - You can follow the same steps to build your own customized BSP based on your interests.
 - For example, for i.MX Linux BSP releases based on Yocto Project `Scarthgap`, the branch is `scarthgap`
+
+### **Please switch the `git branch` for more informations !**
+
+## Support Machines
+|  Machine  |   Kernel  |
+|-----------| --------- |
+| SRG-IMX8P | Kirkstone |
+| SRG-IMX8PL| Kirkstone |
+|uCOM-IMX93 | Scarthgap |
+
 ## Install the `repo` utility:
 - To use this manifest repo, the `repo` tool must be installed first.
 ```bash
@@ -16,7 +26,7 @@ PATH=${PATH}:~/bin
 ## Download the Yocto Project BSP
 ```plaintext
 mkdir <release> && cd <release>
-repo init -u https://github.com/justbuyyal/meta-aaeon-nxp.git -b <branch name> [ -m <release manifest>]
+repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b <branch name> [ -m <release manifest>]
 repo sync
 ```
 - Each branch has detailed READMEs describing exact syntax.
