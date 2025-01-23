@@ -29,7 +29,7 @@
     <linkfile dest="README-IMXBSP" src="README"/>
   </project>
   
-  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="8c535b6b5ce9dc27a83dfc0f35a09e6a70b8b7cb" upstream="kirkstone">
+  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="feda01855decf327ff186da68b75628c67678101" upstream="kirkstone">
     <linkfile dest="aaeon-imx-setup-release.sh" src="conf/aaeon-imx-setup-release.sh"/>
   </project>
 
