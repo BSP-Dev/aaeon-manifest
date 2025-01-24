@@ -2,9 +2,11 @@ This README file contains information on the contents of the meta-aaeon-imx8p la
 
 Please see the corresponding sections below for details.
 # Package requirements
+```bash!
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib zstd liblz4-tool \ 
 build-essential chrpath socat cpio python3 python3-pip python3-pexpect lz4 \ 
 xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm
+```
 
 # repo installation (This step may not be needed if it had already existed)
 $ mkdir ~/bin  
@@ -12,13 +14,13 @@ $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x \~/bin/repo  
 $ export PATH=\~/bin:$PATH  
 
-# Build SRG-IMX8P BSP
-## (1)	Download Yocto BSP with kernel 5.15.71
+# Download Yocto BSP with kernel 5.15.71 (kirkstone)
    $ mkdir imx-yocto-bsp <br />
    $ cd imx-yocto-bsp <br />
-   $ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v01.xml <br />
+   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v01.xml <br />
    $ repo sync
-## (2)	Environment setup
+
+# Build SRG-IMX8P BSP
    2G DDR <br />
    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-2g source aaeon-imx-setup-release.sh -b imx8p_build <br />
    4G DDR <br />
@@ -26,25 +28,18 @@ $ export PATH=\~/bin:$PATH
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
    $ source setup-environment imx8p_build
 
-## (3)	Build NXP IMX BSP
+## Build NXP IMX BSP
    $ bitbake imx-image-full
 
 
 # Build SRG-IMX8PL BSP
-## (1)   Download Yocto BSP with kernel 5.15.71
-   $ mkdir imx-yocto-bsp <br />
-   $ cd imx-yocto-bsp <br />
-   $ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v02.xml <br />
-   $ repo sync
-## (2)   Environment setup
    SRG-IMX8PL 4GB <br />
     $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-imx-setup-release.sh -b imx8p_build <br />
    SRG-IMX8PL 2GB <br />
     $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-2g source aaeon-imx-setup-release.sh -b imx8p_build
 
-## (3)   Build NXP IMX BSP
+## Build NXP IMX BSP
    $ bitbake imx-image-full
-## (4)   Flash to SD Card
     
 ### Noted
 ### If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
