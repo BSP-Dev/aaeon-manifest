@@ -48,7 +48,7 @@ $ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst <br>
 ## Example
 - To download the 6.6.23 release
 ```bash
-repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v01.xml
+repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v01.xml
 ```
 ## Setup the build folder for a BSP release:
 ```
