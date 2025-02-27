@@ -15,7 +15,7 @@
   <remote name="imx"         fetch="https://github.com/nxp-imx"/>
   <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
   
-  <remote name="meta-aaeon-nxp" fetch="git://github.com/BSP-Dev"/>
+  <remote name="meta-aaeon-nxp" fetch="git@github.com:BSP-Dev"/>
 
   <project name="poky" remote="yp" path="sources/poky" revision="f43f393ef0246b7bee6eed8bcf8271cf2b8cdf40" upstream="scarthgap"/>
   <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" revision="80e01188fa822d87d301ee71973c462d7a865493" upstream="scarthgap"/>
