@@ -10,6 +10,7 @@
 |-----------| --------- |
 | SRG-IMX8P | Kirkstone |
 | SRG-IMX8PL| Kirkstone |
+|uCOM-IMX8P | Scarthgap |
 |uCOM-IMX93 | Scarthgap |
 
 ## Install the `repo` utility:
