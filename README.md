@@ -20,8 +20,12 @@ $ export PATH=\~/bin:$PATH
    $ repo sync
 
 # Build BSP
+   2G DDR <br />
+   $ DISTRO=fsl-imx-xwayland MACHINE=ucom-imx8p-2g source aaeon-6636-imx-setup-release.sh -b imx8p_build <br />
+   
    4G DDR <br />
    $ DISTRO=fsl-imx-xwayland MACHINE=ucom-imx8p-4g source aaeon-6636-imx-setup-release.sh -b imx8p_build <br />
+   
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
    $ source setup-environment imx8p_build
 
