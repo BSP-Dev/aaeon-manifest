@@ -21,10 +21,10 @@ $ export PATH=\~/bin:$PATH
 
 # Build BSP
    2G DDR <br />
-   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-2g source real-time-edge-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
+   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-2g source esa-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
    
    4G DDR <br />
-   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-4g source real-time-edge-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
+   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-4g source esa-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
    
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
    $ source setup-environment build-imx8mpevk-real-time-edge

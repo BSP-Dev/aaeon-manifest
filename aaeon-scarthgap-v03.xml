@@ -57,7 +57,7 @@
   <project name="meta-nxp-harpoon" path="sources/meta-nxp-harpoon" remote="nxp" revision="433d731326f75887db8f0febbb2526c5b3e16424"/>
   <project name="meta-nxp-avb" path="sources/meta-nxp-avb" remote="nxp" revision="26cbf1ef3ddebaeb76399dea497e6c2d31a90de1"/>
   
-  <project name="meta-imx8p-esa" path="sources/meta-imx8p-esa" remote="meta-imx8p-esa" revision="989286263a08e6750d7825de03d00755ac8f81a3" upstream="scarthgap">
-     <linkfile dest="real-time-edge-setup-env.sh" src="conf/real-time-edge-setup-env.sh"/>
+  <project name="meta-imx8p-esa" path="sources/meta-imx8p-esa" remote="meta-imx8p-esa" revision="e78ee471bdcea92e4f4efbe1013b0646f770b92f" upstream="scarthgap">
+     <linkfile dest="esa-setup-env.sh" src="conf/esa-setup-env.sh"/>
   </project>
 </manifest>
