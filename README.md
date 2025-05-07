@@ -16,21 +16,21 @@ $ export PATH=\~/bin:$PATH
 # Download Yocto BSP with kernel 6.6.36 (scarthgap)
    $ mkdir imx-yocto-bsp <br />
    $ cd imx-yocto-bsp <br />
-   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v02.xml <br />
+   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v03.xml <br />
    $ repo sync
 
 # Build BSP
    2G DDR <br />
-   $ DISTRO=fsl-imx-xwayland MACHINE=ucom-imx8p-2g source aaeon-6636-imx-setup-release.sh -b imx8p_build <br />
+   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-2g source real-time-edge-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
    
    4G DDR <br />
-   $ DISTRO=fsl-imx-xwayland MACHINE=ucom-imx8p-4g source aaeon-6636-imx-setup-release.sh -b imx8p_build <br />
+   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-4g source real-time-edge-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
    
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
-   $ source setup-environment imx8p_build
+   $ source setup-environment build-imx8mpevk-real-time-edge
 
 ## Build NXP IMX BSP
-   $ bitbake imx-image-full
+   $ bitbake nxp-image-real-time-edge
     
 ### Noted
 ### If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
