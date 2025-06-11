@@ -15,7 +15,7 @@
   <remote name="imx"         fetch="https://github.com/nxp-imx"/>
   <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
   
-  <remote name="meta-aaeon-nxp" fetch="git@github.com:BSP-Dev"/>
+  <remote name="meta-imx8p-esa" fetch="git@github.com:BSP-Dev"/>
 
   <project name="poky" remote="yp" path="sources/poky" revision="f43f393ef0246b7bee6eed8bcf8271cf2b8cdf40" upstream="scarthgap"/>
   <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" revision="80e01188fa822d87d301ee71973c462d7a865493" upstream="scarthgap"/>
@@ -43,8 +43,8 @@
   <project name="meta-nxp-connectivity" remote="imx" path="sources/meta-nxp-connectivity" revision="refs/tags/rel_imx_6.6.36-2.1.0" upstream="imx_matter_2024_q2-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="8fd7154c05b716e9635279047f65785399432d88" upstream="scarthgap-6.6.36-2.1.0" />
   
-  <project name="meta-aaeon-nxp" path="sources/meta-aaeon-nxp" remote="meta-aaeon-nxp" revision="8c6f6bb2aa334e8010f93d81f341d4e0a1f605c9" upstream="scarthgap">
-     <linkfile dest="aaeon-6636-imx-setup-release.sh" src="conf/aaeon-6636-imx-setup-release.sh"/>
+  <project name="meta-imx8p-esa" path="sources/meta-imx8p-esa" remote="meta-imx8p-esa" revision="fc1db68525232be857a7f1d00035abade4b094d3" upstream="scarthgap_non_rt">
+     <linkfile dest="esa-setup-env.sh" src="conf/esa-setup-env.sh"/>
   </project>
 
 </manifest>
