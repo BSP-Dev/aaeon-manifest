@@ -43,7 +43,7 @@
   <project name="meta-nxp-connectivity" remote="imx" path="sources/meta-nxp-connectivity" revision="refs/tags/rel_imx_6.6.36-2.1.0" upstream="imx_matter_2024_q2-post" />
   <project name="meta-nxp-demo-experience" remote="imx-support" path="sources/meta-nxp-demo-experience" revision="8fd7154c05b716e9635279047f65785399432d88" upstream="scarthgap-6.6.36-2.1.0" />
   
-  <project name="meta-imx8p-esa" path="sources/meta-imx8p-esa" remote="meta-imx8p-esa" revision="8e735c146b285aed44d19e78d9c7dde9ae48fc2b" upstream="scarthgap_non_rt">
+  <project name="meta-imx8p-esa" path="sources/meta-imx8p-esa" remote="meta-imx8p-esa" revision="627cdd0cc0b5435d77e0802636dd1a62333d44b1" upstream="scarthgap_non_rt">
      <linkfile dest="esa-setup-env.sh" src="conf/esa-setup-env.sh"/>
   </project>
 
