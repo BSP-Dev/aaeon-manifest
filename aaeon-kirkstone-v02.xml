@@ -24,6 +24,6 @@
 	<project name="kraj/meta-clang.git" path="src/meta-clang" remote="github" revision="312ff1c39b1bf5d35c0321e873417eb013cea477" />
 	
 	<project name="meta-aaeon-mtk" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="a0a14cbcabadc02c81704e5aa94008a82a77082c" upstream="kirkstone">
-      <linkfile dest="aaeon-imx-setup-release.sh" src="conf/aaeon-imx-setup-release.sh"/>
+      <linkfile dest="aaeon-mtk-setup-release.sh" src="conf/aaeon-mtk-setup-release.sh"/>
     </project>
 </manifest>
