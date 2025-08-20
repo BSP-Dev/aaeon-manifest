@@ -19,20 +19,20 @@ $ export PATH=\~/bin:$PATH
 
 ## Download Yocto BSP with kernel 5.15.71 (kirkstone)
 ```bash!
-   $ mkdir imx-yocto-bsp <br />
-   $ cd imx-yocto-bsp <br />
-   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v01.xml <br />
+   $ mkdir imx-yocto-bsp
+   $ cd imx-yocto-bsp
+   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v01.xml
    $ repo sync
 ```
 
 ## Build SRG-IMX8P BSP
    2G DDR <br />
 ```bash!
-   $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-2g source aaeon-imx-setup-release.sh -b imx8p_build <br />
+   $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-2g source aaeon-imx-setup-release.sh -b imx8p_build
 ```
    4G DDR <br />
 ```bash!
-   $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-4g source aaeon-imx-setup-release.sh -b imx8p_build <br />
+   $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-4g source aaeon-imx-setup-release.sh -b imx8p_build
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
    $ source setup-environment imx8p_build
 ```
@@ -45,7 +45,7 @@ $ export PATH=\~/bin:$PATH
 ## Build SRG-IMX8PL BSP
    SRG-IMX8PL 4GB <br />
 ```bash!
-    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-imx-setup-release.sh -b imx8p_build <br />
+    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-imx-setup-release.sh -b imx8p_build
 ```
    SRG-IMX8PL 2GB <br />
 ```bash!
@@ -60,22 +60,22 @@ $ export PATH=\~/bin:$PATH
 ### Noted
 - If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
 ```bash!
-$ bitbake <package_name> -c do_cleansstate <br />
-$ bitbake -c compile <package_name> <br />
-$ bitbake imx-image-full <br />
+$ bitbake <package_name> -c do_cleansstate
+$ bitbake -c compile <package_name>
+$ bitbake imx-image-full
 ```
 - If get FetchError message,then change git branch=master => branch=main.
 
 ### Flash Image into SDcard
 - (1)	Go to Image Path by: <br>
 ```bash!
-$ cd BUILD_DIR/tmp/deploy/images/<MACHINE_NAME>/ <br>
+$ cd BUILD_DIR/tmp/deploy/images/<MACHINE_NAME>/
 ```
 - (2)	Unzip .zst image file <br>
 ```bash!
-$ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst <br>
+$ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst
 ```
-- (3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card <br>
+- (3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card
 - (4)	Use SD-Card Boot Mode to boot in SRG/PICO-IMX8P, SRG/PICO-IMX8PL
 
 # MTK uCOM-M510
@@ -125,9 +125,9 @@ $ export PATH=\~/bin:$PATH
 
 ## Download Yocto BSP with kernel 5.15 (kirkstone)
 ```bash!
-   $ mkdir iot-yocto <br />
-   $ cd iot-yocto <br />
-   $repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v02.xml --no-repo-verify <br />
+   $ mkdir iot-yocto
+   $ cd iot-yocto
+   $repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b kirkstone -m aaeon-kirkstone-v02.xml --no-repo-verify
    $ repo sync
 ```
 
@@ -143,9 +143,9 @@ $ export PATH=\~/bin:$PATH
 ### Noted
 - If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
 ```bash!
-$ bitbake <package_name> -c do_cleansstate <br />
-$ bitbake -c compile <package_name> <br />
-$ bitbake imx-image-full <br />
+$ bitbake <package_name> -c do_cleansstate
+$ bitbake -c compile <package_name>
+$ bitbake imx-image-full
 ```
 - If get FetchError message,then change git branch=master => branch=main.
 
