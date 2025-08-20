@@ -23,7 +23,7 @@
 	<project name="meta-qt5/meta-qt5" path="src/meta-qt5" remote="github" revision="644ebf220245bdc06e7696ccc90acc97a0dd2566" />
 	<project name="kraj/meta-clang.git" path="src/meta-clang" remote="github" revision="312ff1c39b1bf5d35c0321e873417eb013cea477" />
 	
-	<project name="meta-aaeon-mtk" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="2a510d2b8fd7434f6bbefff619345e29a2fff1ec" upstream="kirkstone">
+	<project name="meta-aaeon-mtk" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="ec6c59469ce5e98c0fb9436f4681ca9e3f9f19a0" upstream="kirkstone">
       <linkfile dest="aaeon-mtk-setup-release.sh" src="conf/aaeon-mtk-setup-release.sh"/>
     </project>
 </manifest>
