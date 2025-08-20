@@ -1,5 +1,6 @@
 # AAEON NXP Manifest README
-- This repo is dedicated to the NXP IMX-based modules. Here you can find the Yocto BSP recipes for AAEON.
+- This repo is dedicated to the NXP IMX-based modules & MTK MEDIATEK-based modules.
+- Here you can find the Yocto BSP recipes for AAEON.
 - You can follow the same steps to build your own customized BSP based on your interests.
 - For example, for i.MX Linux BSP releases based on Yocto Project `Scarthgap`, the branch is `scarthgap`
 
@@ -10,6 +11,7 @@
 |-----------| --------- |
 | SRG-IMX8P | Kirkstone |
 | SRG-IMX8PL| Kirkstone |
+|uCOM-M510  | Kirkstone |
 |uCOM-IMX8P | Scarthgap |
 |uCOM-IMX93 | Scarthgap |
 
