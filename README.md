@@ -141,11 +141,11 @@ $ export PATH=\~/bin:$PATH
 ```
 
 ### Noted
-- If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
+- If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build full image again by:
 ```bash!
 $ bitbake <package_name> -c do_cleansstate
 $ bitbake -c compile <package_name>
-$ bitbake imx-image-full
+$ MACHINE=genio-510-evk bitbake rity-demo-image -k
 ```
 - If get FetchError message,then change git branch=master => branch=main.
 
