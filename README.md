@@ -86,7 +86,7 @@ $ sudo apt-get install curl gawk wget git diffstat unzip texinfo gcc build-essen
 socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git \
 python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev liblz4-tool
 ```
--Setup Genio Tools
+- Setup Genio Tools
 ```bash!
 $ sudo apt-get install android-tools-adb android-tools-fastboot
 ```
