@@ -11,9 +11,10 @@
 |-----------| --------- |
 | SRG-IMX8P | Kirkstone |
 | SRG-IMX8PL| Kirkstone |
-|uCOM-M510  | Kirkstone |
-|uCOM-IMX8P | Scarthgap |
-|uCOM-IMX93 | Scarthgap |
+| uCOM-M510 | Kirkstone |
+| uCOM-M700 | Kirkstone |
+| uCOM-IMX8P| Scarthgap |
+| uCOM-IMX93| Scarthgap |
 
 ## Install the `repo` utility:
 - To use this manifest repo, the `repo` tool must be installed first.
