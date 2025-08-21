@@ -78,7 +78,7 @@ $ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst
 - (3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card
 - (4)	Use SD-Card Boot Mode to boot in SRG/PICO-IMX8P, SRG/PICO-IMX8PL
 
-# MTK uCOM-M510
+# MTK uCOM-M510 uCOM-M700
 ### Package requirements
 - Setup Build Environment
 ```bash!
@@ -131,13 +131,23 @@ $ export PATH=\~/bin:$PATH
    $ repo sync
 ```
 
-## Build uCOM-M510 BSP
-   8G DDR <br />
+## Build BSP
+- Environment setup
 ```bash!
    $ source aaeon-mtk-setup-release.sh
    $ TEMPLATECONF=$PWD/src/meta-rity/meta/conf source src/poky/oe-init-build-env
    $ export BUILD_DIR=`pwd`
-   $ MACHINE=genio-510-evk bitbake rity-demo-image -k
+   $ echo 'NDA_BUILD = "1"' >> $BUILD_DIR/conf/site.conf
+   $ echo 'DL_DIR = "${TOPDIR}/../downloads"' >> $BUILD_DIR/conf/site.conf
+   $ echo 'SSTATE_DIR = "${TOPDIR}/../sstate-cache"' >> $BUILD_DIR/conf/site.conf
+```
+- Build uCOM-M510
+```bash!
+   $MACHINE=mtk-ucom-m510 bitbake rity-demo-image -k
+```
+- Build uCOM-M700
+```bash!
+   $MACHINE=mtk-ucom-m700 bitbake rity-demo-image -k
 ```
 
 ### Noted
