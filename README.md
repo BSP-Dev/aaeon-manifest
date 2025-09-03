@@ -1,7 +1,7 @@
 This README file contains information on the contents of the meta-aaeon-nxp & meta-aaeon-mtk layer.
 Please see the corresponding sections below for details.
 
-# NXP SRG-IMX8P SRG-IMX8PL
+# NXP SRT/SRG-IMX8P PICO/SRG-IMX8PL
 ### Package requirements
 ```bash!
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib zstd liblz4-tool \ 
@@ -25,12 +25,12 @@ $ export PATH=\~/bin:$PATH
    $ repo sync
 ```
 
-## Build PICO/SRG-IMX8P BSP
-   2G DDR <br />
+## Build SRT/SRG-IMX8P BSP
+   2GB DDR <br />
 ```bash!
    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-2g source aaeon-imx-setup-release.sh -b imx8p_build
 ```
-   4G DDR <br />
+   4GB DDR <br />
 ```bash!
    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-4g source aaeon-imx-setup-release.sh -b imx8p_build
    If you leave the build code environment, enter imx-yocto-bsp again by: <br />
@@ -43,11 +43,11 @@ $ export PATH=\~/bin:$PATH
 ```
 
 ## Build PICO/SRG-IMX8PL BSP
-   SRG-IMX8PL 4GB <br />
+   4GB DDR <br />
 ```bash!
     $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-imx-setup-release.sh -b imx8p_build
 ```
-   SRG-IMX8PL 2GB <br />
+   2GB DDR<br />
 ```bash!
     $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-2g source aaeon-imx-setup-release.sh -b imx8p_build
 ```
