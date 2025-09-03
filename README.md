@@ -25,7 +25,7 @@ $ export PATH=\~/bin:$PATH
    $ repo sync
 ```
 
-## Build SRG-IMX8P BSP
+## Build PICO/SRG-IMX8P BSP
    2G DDR <br />
 ```bash!
    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8p-2g source aaeon-imx-setup-release.sh -b imx8p_build
@@ -42,7 +42,7 @@ $ export PATH=\~/bin:$PATH
    $ bitbake imx-image-full
 ```
 
-## Build SRG-IMX8PL BSP
+## Build PICO/SRG-IMX8PL BSP
    SRG-IMX8PL 4GB <br />
 ```bash!
     $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-imx-setup-release.sh -b imx8p_build
