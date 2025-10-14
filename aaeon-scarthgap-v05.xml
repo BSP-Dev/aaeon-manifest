@@ -21,7 +21,7 @@
 	<project name="meta-security" path="src/meta-security" remote="yocto" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3" />
 	<project name="kraj/meta-clang.git" path="src/meta-clang" remote="github" revision="eaa08939eaec9f620b14742ff3ac568553683034" />
 	
-	<project name="meta-aaeon-mtk" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="92c4da950173d9031748642ecffec6e69d299f16" upstream="scarthgap">
+	<project name="meta-aaeon-mtk" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="a7a302b574acb64bc7bfe6203b3c0e2c270852c0" upstream="scarthgap">
       <linkfile dest="aaeon-mtk-setup-release.sh" src="conf/aaeon-mtk-setup-release.sh"/>
     </project>
 </manifest>
