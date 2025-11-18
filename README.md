@@ -1,80 +1,120 @@
-# AAEON Manifest README (scarthgap)
-
-# Build uCOM-IMX8P
-# Package requirements
-```bash!
-sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib zstd liblz4-tool \ 
-build-essential chrpath socat cpio python3 python3-pip python3-pexpect lz4 \ 
-xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm
-```
-# repo installation (This step may not be needed if it had already existed)
-$ mkdir ~/bin  
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo  
-$ chmod a+x \~/bin/repo  
-$ export PATH=\~/bin:$PATH  
-
-# Download Yocto BSP with kernel 6.6.36 (scarthgap)
-   $ mkdir imx-yocto-bsp <br />
-   $ cd imx-yocto-bsp <br />
-   $ repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v03.xml <br />
-   $ repo sync
-
-# Build BSP
-   2G DDR <br />
-   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-2g source esa-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
-   
-   4G DDR <br />
-   $ DISTRO=nxp-real-time-edge MACHINE=imx-ucom-imx8p-4g source esa-setup-env.sh -b build-imx8mpevk-real-time-edge <br />
-   
-   If you leave the build code environment, enter imx-yocto-bsp again by: <br />
-   $ source setup-environment build-imx8mpevk-real-time-edge
-
-## Build NXP IMX BSP
-   $ bitbake nxp-image-real-time-edge
-    
-### Noted
-### If you encounter a bitbake error from a recipe, try to re-build it. After building successfully, then build the imx-image-full again by:
-$ bitbake <package_name> -c do_cleansstate <br />
-$ bitbake -c compile <package_name> <br />
-$ bitbake imx-image-full <br />
-### If get FetchError message,then change git branch=master => branch=main.
-
-# Flash Image into SDcard
-## (1)	Go to Image Path by: <br>
-$ cd BUILD_DIR/tmp/deploy/images/<MACHINE_NAME>/ <br>
-## (2)	Unzip .zst image file <br>
-$ unzstd imx-image-full-<MACHINE_NAME>-xxxxxx.rootfs.wic.zst <br>
-## (3)	Flash unzipped file named imx-image-full-<MACHINE_NAME>-xxxxxxx.rootfs.wic into SD-Card <br>
-## (4)	Use SD-Card Boot Mode to boot in SRG/PICO-IMX8P, SRG/PICO-IMX8PL
-
-
-# Build uCOM-IMX93
-## Example
-- To download the 6.6.23 release
+# AAEON NXP Manifest README
+- This repo is dedicated to the NXP IMX-based modules. Here you can find the Yocto BSP recipes for AAEON.
+- You can follow the same steps to build your own customized BSP based on your interests.
+- For example, for i.MX Linux BSP releases based on Yocto Project `Kirkstone`, the branch is `kirkstone`
+## Install the `repo` utility:
+- To use this manifest repo, the `repo` tool must be installed first.
 ```bash
-repo init -u git@github.com:BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v01.xml
+mkdir ~/bin
+curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+chmod a+x ~/bin/repo
+PATH=${PATH}:~/bin
 ```
-## Setup the build folder for a BSP release:
+## Install essential host packages
+- Your Build Host must install required packages for the Yocto build. Reference to the section "Build Host Packages" in the document "Yocto Project Quick build".
+    - [Build-Host-Packages](https://docs.yoctoproject.org/5.0.3/brief-yoctoprojectqs/index.html#build-host-packages)
+
+## Download the Yocto Project BSP
+```plaintext
+mkdir <release> && cd <release>
+repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b <branch name> [ -m <release manifest>]
+repo sync
 ```
-[MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./aaeon-imx-setup-release.sh -b bld-<backend>
-<machine>   defaults to `ucom-imx93-v1`
-<backend>   Graphics backend type
+- Each branch has detailed READMEs describing exact syntax.
+
+- Please see the corresponding sections below for details.
+
+### Support Devices
+
+| Machine     | DDR   |
+| ----------- | ----- |
+| uCOM-IMX8P  | 2G/4G |
+| uCOM-IMX93  |       |
+| SRG-IMX8PL  | 2G/4G |
+| PICO-IMX8PL | 2G/4G |
+
+### Build SRG/PICO-IMX8PL BSP
+- (1)	Download Yocto BSP with kernel 6.6.36
+    ```bash!
+    $ mkdir imx-yocto-bsp
+    $ cd imx-yocto-bsp
+    $ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v02.xml
+    $ repo sync
+    ```
+- (2)	Environment setup
+    ```bash!
+    # SRG/PICO-IMX8PL (2G DDR)
+    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-2g source aaeon-6636-imx-setup-release.sh -b imx8p_build
+	
+	# SRG/PICO-IMX8PL (4G DDR)
+    $ DISTRO=fsl-imx-wayland MACHINE=srg-imx8pl-4g source aaeon-6636-imx-setup-release.sh -b imx8p_build
+    
+    ```
+    
+- (3)	Build NXP IMX BSP
+    ```bash!
+    $ bitbake imx-image-full
+
+    # For quick test
+    $ bitbake core-image-minimal
+    ```
+- Note: (1)	If FetchError,then change git branch=master => branch=main
+
+
+### Build uCOM-IMX8P BSP
+- (1)	Download Yocto BSP with kernel 6.6.36
+    ```bash!
+    $ mkdir imx-yocto-bsp
+    $ cd imx-yocto-bsp
+    $ repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v02.xml
+    $ repo sync
+    ```
+- (2)	Environment setup
+    ```bash!
+    # uCOM-IMX8P (2G DDR)
+    $ DISTRO=fsl-imx-wayland MACHINE=ucom-imx8p-2g source aaeon-6636-imx-setup-release.sh -b imx8p_build
+	
+	# uCOM-IMX8P (4G DDR)
+    $ DISTRO=fsl-imx-wayland MACHINE=ucom-imx8p-4g source aaeon-6636-imx-setup-release.sh -b imx8p_build
+    
+    ```
+    
+- (3)	Build NXP IMX BSP
+    ```bash!
+    $ bitbake imx-image-full
+
+    # For quick test
+    $ bitbake core-image-minimal
+    ```
+- Note: (1)	If FetchError,then change git branch=master => branch=main
+
+### Build uCOM-IMX93 BSP
+- (1)	Download Yocto BSP with kernel 6.6.23
+    ```bash!
+    repo init -u https://github.com/BSP-Dev/aaeon-manifest.git -b scarthgap -m aaeon-scarthgap-v01.xml
+    ```
+- (2)	Setup the build folder for a BSP release:
+    ```bash!
+	[MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./aaeon-setup-release.sh -b bld-<backend>
+	<machine>   defaults to `ucom-imx93-v1`
+	<backend>   Graphics backend type
     xwayland    Wayland with X11 support - default distro
     wayland     Wayland
     fb          Framebuffer (not supported for mx8)
-```
-Examples:
-- Setup for Xwayland
-```bash
-MACHINE=ucom-imx93-v1 DISTRO=fsl-imx-xwayland source ./aaeon-imx-setup-release.sh -b bld-xwayland
-```
-## Build an image:
-```plaintext
-bitbake <image recipe>
-```
-Some image recipe:
-| Image Name | Description |
-| -------- | -------- |
-| imx-image-core | core image with basic graphics and no multimedia |
-| imx-image-multimedia | image with multimedia and graphics |
-| imx-image-full | image with multimedia and machine learning and Qt |
+    ```
+	Examples:
+	- Setup for Xwayland
+	```bash
+	MACHINE=ucom-imx93-v1 DISTRO=fsl-imx-xwayland source ./aaeon-setup-release.sh -b bld-xwayland
+	```
+    
+- (3)	Build an image:
+    ```bash!
+	bitbake <image recipe>
+    ```
+- Some image recipe:
+	| Image Name | Description |
+	| -------- | -------- |
+	| imx-image-core | core image with basic graphics and no multimedia |
+	| imx-image-multimedia | image with multimedia and graphics |
+	| imx-image-full | image with multimedia and machine learning and Qt |
