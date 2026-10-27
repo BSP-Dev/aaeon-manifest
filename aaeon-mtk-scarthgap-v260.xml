@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="rity" fetch="https://gitlab.com/mediatek/aiot/rity" />
+	<remote name="yocto" fetch="https://git.yoctoproject.org" />
+	<remote name="oe" fetch="https://git.openembedded.org" />
+	<remote name="github" fetch="https://github.com/" />
+	<remote name="collabora" fetch="https://gitlab.collabora.com/mediatek/aiot/rity" />
+	<remote name="asix" fetch="https://gitlab.com/asix_official/ax88179_series/mtk_genio/yocto/rity/" />
+	<remote name="meta-aaeon-mtk" fetch="https://github.com/BSP-Dev/" />
+
+	<default revision="scarthgap" />
+
+	<project name="meta-rity.git" path="src/meta-rity" remote="rity" revision="refs/tags/rity-scarthgap-v26.0" />
+	<project name="meta-mediatek-bsp.git" path="src/meta-mediatek-bsp" remote="rity" revision="refs/tags/rity-scarthgap-v26.0">
+		<linkfile src="scripts/genio-account-setup.py" dest="genio-account-setup.py" />
+	</project>
+	<project name="meta-mediatek-tsn.git" path="src/meta-mediatek-tsn" remote="rity" revision="refs/tags/rity-scarthgap-v26.0" />
+	<project name="meta-mediatek-demo.git" path="src/meta-mediatek-demo" remote="rity" revision="refs/tags/rity-scarthgap-v26.0" />
+	<project name="meta-mediatek-bluedroid.git" path="src/meta-mediatek-bluedroid" remote="rity" revision="refs/tags/rity-scarthgap-v26.0" />
+	<project name="meta-nn.git" path="src/meta-nn" remote="rity" revision="refs/tags/rity-scarthgap-v26.0" />
+	<project name="poky.git" path="src/poky" remote="yocto" revision="d4576e3c081a7ee7b57d48421c4c4f491cb4defe" />
+	<project name="meta-arm.git" path="src/meta-arm" remote="yocto" revision="a81c19915b5b9e71ed394032e9a50fd06919e1cd" />
+	<project name="meta-openembedded" path="src/meta-openembedded" remote="oe" revision="ae7dfb12245c7f9b9a353499e2688015bd4e6413" />
+	<project name="meta-tensorflow.git" path="src/meta-tensorflow" remote="yocto" revision="eeee54cfa3c51c1fd99604a0d5f173096bdcf1da" />
+	<project name="meta-security" path="src/meta-security" remote="yocto" revision="b13f1705d723650de61277670c8a76aadea4cfdd" />
+	<project name="kraj/meta-clang.git" path="src/meta-clang" remote="github" revision="b4532c75af7b1957b10cc4d5377fc4cfa0b1cbf6" />
+	<project name="meta-lts-mixins.git" path="src/meta-lts-mixins" remote="yocto" revision="96deb45139df027473faf0938fe006d33c45c375" />
+	<project name="meta-browser.git" path="src/meta-browser" remote="collabora" revision="f50e7319de63d6c36810cfbfac417e18233d430e" />
+	<project name="meta-asix" path="src/meta-asix" remote="asix" revision="d2551230c1fc4a0bebd2d2f0b5e3e9a0aee678e2" />
+  	<project name="meta-aaeon-mtk.git" path="src/meta-aaeon-mtk" remote="meta-aaeon-mtk" revision="6066df7458adab3bfe69616374bd6922a3213c81" dest-branch="scarthgap-v26.0"/>
+</manifest>
